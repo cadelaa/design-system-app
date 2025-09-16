@@ -2,19 +2,6 @@
 import { StyleSheet, TextStyle } from "react-native";
 
 
-
-// For ensuring screens meet safe area requirements
-
-export const globalStyles = StyleSheet.create({
-    screenContainer: {
-        flex: 1,
-        // backgroundColor: "#fff",
-        padding: 16,
-        gap: 32,
-    },
-});
-
-
 // Colors (Introducing light/dark theme later)
 
 // work in progress / refining definitions, naming, etc in figma
@@ -71,3 +58,22 @@ export const textStyles = {
         letterSpacing: 0,
     },
 };
+
+
+
+// For ensuring screens meet safe area requirements
+
+export const globalStyles = StyleSheet.create({
+    screenContainer: {
+        flex: 1,
+        // backgroundColor: "#fff",
+        padding: SPACING.M,
+        gap: SPACING.XL,
+    },
+
+    titleContainer: {
+        paddingBottom: SPACING.XL,
+        paddingTop: SPACING.XL,
+        gap: SPACING.M,
+    },
+});
