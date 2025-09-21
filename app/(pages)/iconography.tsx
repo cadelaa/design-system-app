@@ -1,10 +1,14 @@
 import { StyleSheet } from 'react-native';
 
+import Button from "@/components/Button";
 import { globalStyles, SPACING, textStyles } from "@/constants/globalStyles";
-import { Button, ScrollView, Text, View } from 'react-native';
+import { useNavigation } from "@react-navigation/native";
+import { ScrollView, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function Iconography() {
+  const navigation = useNavigation();
+
   return (
     <SafeAreaView edges={['top', 'left', 'right']} style={{ flex: 1 }}>
 
@@ -20,19 +24,18 @@ export default function Iconography() {
 
         {/* Main Content */}
 
-        
 
 
-
-        {/* Floating Back Button */}
-
-        <Button
-            title="Back"
-            color="black"
-            accessibilityLabel="Learn more about this purple button"
-        />
+        <View style={[styles.extraArea, ]}></View>
 
       </ScrollView>
+
+
+      {/* Floating Back Button */}
+
+      <View style={[styles.floatingActionButtonContainer, ]}>
+        <Button label="Back"/>
+      </View>
 
     </SafeAreaView>
   );
@@ -58,6 +61,16 @@ const styles = StyleSheet.create({
 
     disabled: {
         opacity: 0.5,
+    },
+
+    floatingActionButtonContainer: {
+      padding: 16,
+      paddingBottom: 32,
+      backgroundColor: 'white',
+    },
+
+    extraArea: {
+      padding: 16,
     },
 
     whiteText: {

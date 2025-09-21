@@ -64,6 +64,8 @@ export default function Core() {
             <Text style={ textStyles.subTitle }>Content</Text>
           </View>
 
+          <View style={[styles.extraArea, ]}></View>
+
         </View>
 
       </ScrollView>
@@ -80,11 +82,13 @@ const styles = StyleSheet.create({
     gap: SPACING.S,
     marginTop: SPACING.M,
   },
+
   gridItem: {
-    width: "48.94%",          // 2 per row (100 / 2 = 50, minus gap)
+    height: 150,
+    width: "48.94%",  // 2 per row (100 / 2 = 50, minus gap)
     justifyContent: "center",
     alignItems: "center",
-    borderRadius: 8,         // vertical spacing
+    borderRadius: 8,  // vertical spacing
     backgroundColor: "lightgrey",
     paddingLeft: SPACING.M,
     paddingRight: SPACING.M,
@@ -92,7 +96,12 @@ const styles = StyleSheet.create({
     paddingBottom: SPACING.XL,
     gap: SPACING.S,
   },
+
   disabled: {
     opacity: 0.5,
-  }
+  },
+
+  extraArea: {
+      padding: 16,
+  },
 });
