@@ -3,11 +3,13 @@ import { StyleSheet } from 'react-native';
 import Button from "@/components/Button";
 import { globalStyles, SPACING, textStyles } from "@/constants/globalStyles";
 import { useNavigation } from "@react-navigation/native";
-import { ScrollView, Text, View } from 'react-native';
+import { useRouter } from "expo-router";
+import { Pressable, ScrollView, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function Color() {
   const navigation = useNavigation();
+  const router = useRouter();
 
   return (
     <SafeAreaView edges={['top', 'left', 'right']} style={{ flex: 1 }}>
@@ -31,10 +33,10 @@ export default function Color() {
             <Text style={ textStyles.subTitle }>Neutrals</Text>
           </View>
 
-          <View style={[styles.gridItem, styles.blue, ]}>
+          <Pressable style={[styles.gridItem, styles.blue, ]} onPress={() => router.push("/(pages)/blue")}>
             <Text style={[ textStyles.body, styles.whiteText, ]}>#256CF0</Text>
             <Text style={[ textStyles.subTitle, styles.whiteText, ]}>Blue</Text>
-          </View>
+          </Pressable>
 
           <View style={[styles.gridItem, styles.indigo, ]}>
             <Text style={[ textStyles.body, styles.whiteText, ]}>#5125F0</Text>

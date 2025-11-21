@@ -5,9 +5,9 @@ import React from "react";
 import { GestureResponderEvent, Pressable, StyleSheet, Text } from "react-native";
 
 type AppButtonProps = {
-  label?: string; // default text
-  onPress?: (event: GestureResponderEvent) => void; // custom action
-  style?: object; // allow style overrides if needed
+  label?: string;
+  onPress?: (event: GestureResponderEvent) => void;
+  style?: object;
   textStyle?: object;
 };
 
@@ -21,9 +21,9 @@ export default function Button({
 
   const handlePress = (event: GestureResponderEvent) => {
     if (onPress) {
-      onPress(event); // custom behavior
+      onPress(event);
     } else {
-      navigation.goBack(); // default back behavior
+      navigation.goBack();
     }
   };
 
@@ -32,7 +32,7 @@ export default function Button({
       onPress={handlePress}
       style={({ pressed }) => [
         styles.button,
-        pressed && styles.buttonPressed, // ✅ extra style when pressed
+        pressed && styles.buttonPressed,
       ]}
     >
       {({ pressed }) => (
@@ -53,14 +53,14 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  buttonPressed: {
-    backgroundColor: "#333", // darker shade when pressed
-  },
   text: {
     ...textStyles.body,
     color: "white",
   },
-  textPressed: {
-    color: "#ddd", // lighter text when pressed
+  buttonPressed: {
+    backgroundColor: "#333",
   },
+  textPressed: {
+    color: "#ddd",
+},
 });

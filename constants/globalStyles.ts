@@ -52,7 +52,7 @@ export const textStyles = {
         letterSpacing: 0,
     } as TextStyle,
     caption: {
-        fontSize: 14,
+        fontSize: 12,
         fontWeight: 400,
         lineHeight: 16,
         letterSpacing: 0,
@@ -66,7 +66,6 @@ export const textStyles = {
 export const globalStyles = StyleSheet.create({
     screenContainer: {
         flex: 1,
-        // backgroundColor: "#fff",
         padding: SPACING.M,
         gap: SPACING.XL,
     },

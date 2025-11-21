@@ -7,6 +7,7 @@ export default function PagesLayout() {
       <Stack.Screen name="color" options={{ headerShown: false }} />
       <Stack.Screen name="typography" options={{ headerShown: false }} />
       <Stack.Screen name="iconography" options={{ headerShown: false }} />
+      <Stack.Screen name="blue" options={{ headerShown: false }} />
     </Stack>
   );
 }
